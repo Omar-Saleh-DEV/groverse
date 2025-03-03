@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -18,18 +19,21 @@ export default function Home() {
         Powering the future with clean, sustainable, and affordable solar energy solutions.
       </p>
 
+      {/* Hero Image */}
+      <div className="relative w-full max-w-4xl h-72 md:h-96 mb-10">
+        <Image
+          src="/09.jpg" 
+          alt="Solar Panels Powering Homes"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg shadow-lg"
+        />
+      </div>
+
       {/* Call to Action Button */}
       <Link href="/products">
         <span className="btn-primary">Explore Our Products</span>
       </Link>
-
-      {/* Spacer for Future Image */}
-      <div className="h-60 md:h-96 w-full flex items-center justify-center my-16">
-        {/* Placeholder for future image */}
-        <div className="bg-gray-200 rounded-lg w-5/6 h-full flex items-center justify-center text-gray-500 text-lg">
-           Image Here
-        </div>
-      </div>
 
       {/* Footer with Spacing */}
       <div className="mb-20 md:mb-40"></div>
